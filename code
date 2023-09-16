@@ -1,0 +1,115 @@
+class program
+{
+    static void Main()
+    {
+        //FOOD DELIVERY APP USING C#
+        Console.WriteLine("Welcome to Basit Food Palace!");
+        Console.WriteLine("Menu");
+
+        // Creating a menu list for the food items
+        List<string> foodMenu = new List<string>
+        {
+            "1. Pizza: $8.00",
+            "2. Meat Pie: $2.00",
+            "3. Burger: $5.00",
+            "4. Sausage Roll: $4.00",
+            "5. Salad: $7.00",
+            "6. Pasta: $8.00",
+            "7. Rice,stew and Chicken: $15.00",
+            
+        };
+
+        List<string> drinkMenu = new List<string>
+        {
+            "8. Coca Cola: $5.00",
+            "9. Fanta: $4.00",
+            "10. Iced Tea: $1.00",
+            "11. Water: Free",
+            "12. Done and proceed to payment",
+            "13. Exit",
+        };
+
+        Console.WriteLine("\nfood Menu:");
+        foreach (string fooditem in foodMenu)
+        {
+            Console.WriteLine(fooditem);
+        }
+
+        Console.WriteLine("\ndrink Menu");
+        foreach (string drinkitem in drinkMenu)
+        {
+            Console.WriteLine(drinkitem);
+        }
+
+        int orderLimits = 5;
+        int ordereditems = 0;
+        
+        
+          
+            while (ordereditems < orderLimits)
+            {
+               Console.WriteLine($"You can order up to {orderLimits - ordereditems} more items");
+
+             Console.WriteLine("\n Enter your choice (1-13)");
+                string choice = Console.ReadLine();
+            if (ordereditems == orderLimits)
+            {
+                Console.WriteLine($"You have reached the maximum order limit");
+            }
+            switch (choice)
+                {
+                    case "1":
+                    Console.WriteLine("You have ordered a Pizza");
+                        break;
+                    case "2":
+                        Console.WriteLine("You have ordered a MeatPie");
+                        break;
+                    case "3":
+                        Console.WriteLine("You have ordered a Burger");
+                        break;
+                    case "4":
+                        Console.WriteLine("You have ordered a Sausage Roll");
+                        break;
+                    case "5":
+                        Console.WriteLine("You have ordered a Salad");
+                        break;
+                    case "6":
+                        Console.WriteLine("You have ordered a Pasta");
+                        break;
+                    case "7":
+                        Console.WriteLine("You have ordered a Rice,stew and Chicken");
+                        break;
+                    case "8":
+                        Console.WriteLine("You have ordered a Coca Cola");
+                        break;
+                    case "9":
+                        Console.WriteLine("You have ordered a Fanta");
+                        break;
+                    case "10":
+                        Console.WriteLine("You have ordered a Iced Tea");
+                        break;
+                    case "11":
+                        Console.WriteLine("You have ordered a Water");
+                        break;
+                case "12":
+                    Console.WriteLine("Order successful, please proceed to payment");
+                    break;
+                case "13":
+                    Console.WriteLine("Thanks for Ordering");
+                    Environment.Exit(0);
+                    break;
+                default:
+                    Console.WriteLine("invalid input");
+                    break;
+
+
+
+                }
+            
+
+            }
+        
+       
+            Console.ReadLine();
+    }   
+}
